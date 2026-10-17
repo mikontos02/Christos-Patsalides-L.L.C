@@ -1,0 +1,97 @@
+{
+  "colorScheme": "light",
+  "fonts": [
+    {
+      "family": "Manrope",
+      "role": "body"
+    },
+    {
+      "family": "Inter",
+      "role": "unknown"
+    },
+    {
+      "family": "Open Sans",
+      "role": "unknown"
+    }
+  ],
+  "colors": {
+    "primary": "#434867",
+    "secondary": "#EF3F56",
+    "accent": "#BD995C",
+    "background": "#FFFFFF",
+    "textPrimary": "#BD995C",
+    "link": "#BD995C"
+  },
+  "typography": {
+    "fontFamilies": {
+      "primary": "Manrope",
+      "heading": "Manrope"
+    },
+    "fontStacks": {
+      "heading": [
+        "Manrope",
+        "sans-serif"
+      ],
+      "body": [
+        "Manrope",
+        "sans-serif"
+      ],
+      "paragraph": [
+        "Manrope",
+        "sans-serif"
+      ]
+    },
+    "fontSizes": {
+      "h1": "16px",
+      "h2": "36px",
+      "body": "18px"
+    }
+  },
+  "spacing": {
+    "baseUnit": 4,
+    "borderRadius": "3px"
+  },
+  "components": {},
+  "images": {
+    "logo": "https://www.patsalides.com.cy/wp-content/uploads/2021/12/logo.svg",
+    "favicon": "https://www.patsalides.com.cy/wp-content/uploads/2021/12/favicon-150x150.png",
+    "ogImage": "https://www.patsalides.com.cy/wp-content/uploads/2022/01/rfdp7_80v5a-joel-filipe.png",
+    "logoHref": "https://www.patsalides.com.cy"
+  },
+  "__llm_logo_reasoning": {
+    "selectedIndex": 0,
+    "reasoning": "Selected #0 because it is visible, located in the header, links to the homepage, and matches the brand name 'Christos Patsalides LLC'.",
+    "confidence": 0.95,
+    "source": "llm"
+  },
+  "personality": {
+    "tone": "professional",
+    "energy": "medium",
+    "targetAudience": "legal professionals and clients seeking legal services"
+  },
+  "designSystem": {
+    "framework": "custom",
+    "componentLibrary": ""
+  },
+  "confidence": {
+    "buttons": 0,
+    "colors": 0.9,
+    "overall": 0.45
+  },
+  "__llm_metadata": {
+    "logoSelection": {
+      "llmCalled": true,
+      "llmSucceeded": true,
+      "finalSource": "llm",
+      "rawLogoSelection": {
+        "selectedLogoIndex": 0,
+        "selectedLogoReasoning": "Selected #0 because it is visible, located in the header, links to the homepage, and matches the brand name 'Christos Patsalides LLC'.",
+        "confidence": 0.95
+      }
+    },
+    "buttonClassification": {
+      "llmCalled": false,
+      "llmSucceeded": false
+    }
+  }
+}
