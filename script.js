@@ -325,20 +325,11 @@
     title.classList.add('is-splitting');
   }
 
-  /* ---------- Ticker pause control (WCAG 2.2.2) ---------- */
+  /* ---------- Ticker: stop animating while off-screen ---------- */
   function initTicker() {
     const ticker = document.querySelector('[data-ticker]');
-    const button = document.querySelector('[data-ticker-toggle]');
-    if (!ticker || !button) return;
+    if (!ticker) return;
 
-    const label = button.querySelector('[data-ticker-label]');
-    button.addEventListener('click', () => {
-      const paused = ticker.classList.toggle('is-paused');
-      button.setAttribute('aria-pressed', String(paused));
-      label.textContent = paused ? 'Play animation' : 'Pause animation';
-    });
-
-    // Stop animating while off-screen
     if ('IntersectionObserver' in window) {
       const track = ticker.querySelector('.ticker__track');
       new IntersectionObserver(([entry]) => {
