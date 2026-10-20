@@ -9,7 +9,6 @@
   function initMenu() {
     const toggle = document.querySelector('[data-menu-toggle]');
     const menu = document.querySelector('[data-menu]');
-    const header = document.querySelector('[data-header]');
     if (!toggle || !menu) return;
 
     const label = toggle.querySelector('.menu-toggle__label');
@@ -34,7 +33,6 @@
       menu.hidden = !open;
       document.body.classList.toggle('is-menu-open', open);
       outside.forEach((el) => { if (el) el.inert = open; });
-      if (header) header.classList.remove('is-hidden');
 
       if (open) {
         const first = menu.querySelector('a');
@@ -273,36 +271,19 @@
     byId.forEach((_, id) => { const h = document.getElementById(id); if (h) observer.observe(h); });
   }
 
-  /* ---------- Header: hide on scroll down, reveal on scroll up ---------- */
+  /* ---------- Header: always visible; adds a hairline once the page is scrolled ---------- */
   function initHeader() {
     const header = document.querySelector('[data-header]');
     if (!header) return;
 
-    let lastY = window.scrollY;
     let ticking = false;
-
-    function update() {
-      const y = window.scrollY;
-      const threshold = header.offsetHeight * 2;
-      const menuOpen = document.body.classList.contains('is-menu-open');
-
-      header.classList.toggle('is-scrolled', y > 4);
-      const dropdownOpen = header.querySelector('.site-nav__item.is-open');
-      if (!menuOpen && !dropdownOpen) {
-        header.classList.toggle('is-hidden', y > threshold && y > lastY && !header.contains(document.activeElement));
-      }
-      lastY = y;
+    const update = () => {
+      header.classList.toggle('is-scrolled', window.scrollY > 4);
       ticking = false;
-    }
-
+    };
     window.addEventListener('scroll', () => {
-      if (!ticking) {
-        ticking = true;
-        window.requestAnimationFrame(update);
-      }
+      if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
     }, { passive: true });
-
-    header.addEventListener('focusin', () => header.classList.remove('is-hidden'));
     update();
   }
 
@@ -311,31 +292,23 @@
     const title = document.querySelector('[data-split]');
     if (!title || reduceMotion.matches) return;
 
-    const words = title.textContent.trim().split(/\s+/);
-    title.setAttribute('aria-label', title.textContent.trim());
-    title.textContent = '';
-    words.forEach((word, i) => {
-      const span = document.createElement('span');
-      span.className = 'word';
-      span.setAttribute('aria-hidden', 'true');
-      span.style.setProperty('--i', i);
-      span.textContent = word;
-      title.append(span, i < words.length - 1 ? ' ' : '');
+    // Split each line (or the whole title) into words, keeping deliberate line breaks
+    const lines = title.querySelectorAll('.hero__line').length ? [...title.querySelectorAll('.hero__line')] : [title];
+    title.setAttribute('aria-label', title.textContent.replace(/\s+/g, ' ').trim());
+    let i = 0;
+    lines.forEach((line) => {
+      const words = line.textContent.trim().split(/\s+/);
+      line.textContent = '';
+      words.forEach((word, k) => {
+        const span = document.createElement('span');
+        span.className = 'word';
+        span.setAttribute('aria-hidden', 'true');
+        span.style.setProperty('--i', i++);
+        span.textContent = word;
+        line.append(span, k < words.length - 1 ? ' ' : '');
+      });
     });
     title.classList.add('is-splitting');
-  }
-
-  /* ---------- Ticker: stop animating while off-screen ---------- */
-  function initTicker() {
-    const ticker = document.querySelector('[data-ticker]');
-    if (!ticker) return;
-
-    if ('IntersectionObserver' in window) {
-      const track = ticker.querySelector('.ticker__track');
-      new IntersectionObserver(([entry]) => {
-        track.style.animationPlayState = entry.isIntersecting ? '' : 'paused';
-      }).observe(ticker);
-    }
   }
 
   /* ---------- Scroll reveal ---------- */
@@ -603,7 +576,6 @@
   initToc();
   initHeader();
   initSplitTitle();
-  initTicker();
   initReveal();
   initContactForm();
   initApplicationForm();

@@ -110,64 +110,63 @@
   <main id="main">
     <!-- ============ Hero ============ -->
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="container hero__grid">
-        <div class="hero__aside">
-          <p class="hero__aside-text">Write to us about your matter.</p>
-          <div class="btn-group">
-            <a class="btn btn--primary" href="#contact">Request a consultation</a>
-            <a class="text-link" href="#business">Areas of practice</a>
-          </div>
-        </div>
-
-        <div class="hero__main">
-          <p class="eyebrow">Christos Patsalides LLC · Nicosia, Cyprus</p>
-          <h1 class="h1 hero__title" id="hero-title" data-split>Advising and protecting our clients’ interests, diligently, since&nbsp;1996.</h1>
-          <p class="hero__lede">Litigation, corporate and private client work for domestic and international clients and the public sector, from our offices close to the Nicosia courts.</p>
+      <div class="container hero__intro">
+        <p class="eyebrow hero__eyebrow">Christos Patsalides LLC · Nicosia, Cyprus</p>
+        <h1 class="h1 hero__title" id="hero-title" data-split><span class="hero__line">Legal expertise.</span> <span class="hero__line">Trusted counsel.</span> <span class="hero__line">Lasting confidence.</span></h1>
+        <p class="hero__lede">Since 1996 we have advised and protected our clients’ interests through effective representation and innovative, practical solutions, from our offices in the heart of Nicosia.</p>
+        <div class="btn-group hero__actions">
+          <a class="btn btn--primary" href="contact-us/index.html">Discuss your legal needs <span class="btn__arrow" aria-hidden="true">→</span></a>
+          <a class="text-link" href="areas-of-practice/index.html">Explore our expertise</a>
         </div>
       </div>
 
-      <!-- Decorative ticker, after the reference's “LAW · FIRM” band -->
-      <div class="ticker" data-ticker>
-        <div class="ticker__viewport" aria-hidden="true">
-          <div class="ticker__track">
-            <div class="ticker__group">
-              <span class="ticker__word">LAW</span>
-              <img class="ticker__img" src="assets/images/ticker-reception.webp" alt="" width="600" height="400">
-              <span class="ticker__word">FIRM</span>
-              <img class="ticker__img" src="assets/images/ticker-boardroom.webp" alt="" width="600" height="400">
-              <span class="ticker__word">NICOSIA</span>
-              <img class="ticker__img" src="assets/images/ticker-library.webp" alt="" width="600" height="400">
-            </div>
-            <div class="ticker__group">
-              <span class="ticker__word">LAW</span>
-              <img class="ticker__img" src="assets/images/ticker-reception.webp" alt="" width="600" height="400">
-              <span class="ticker__word">FIRM</span>
-              <img class="ticker__img" src="assets/images/ticker-boardroom.webp" alt="" width="600" height="400">
-              <span class="ticker__word">NICOSIA</span>
-              <img class="ticker__img" src="assets/images/ticker-library.webp" alt="" width="600" height="400">
-            </div>
-          </div>
+      <div class="container hero__stage">
+        <p class="hero__word" aria-hidden="true">Integrity</p>
+        <div class="hero__aside hero__aside--left">
+          <p class="label">Established 1996</p>
+          <p>Domestic and international clients, and the public sector.</p>
         </div>
+        <ul class="hero__aside hero__aside--right" role="list">
+          <li><span class="label">Office</span>Nicosia, Cyprus</li>
+          <li><span class="label">Services</span>Legal &amp; corporate</li>
+        </ul>
+        <a class="hero__scroll" href="#about" aria-label="Scroll to our story">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <defs><path id="scroll-ring" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0"/></defs>
+            <text><textPath href="#scroll-ring" textLength="230">SCROLL DOWN · SCROLL DOWN ·</textPath></text>
+            <path class="hero__scroll-arrow" d="M50 38 V62 M41 53 L50 62 L59 53"/>
+          </svg>
+        </a>
       </div>
     </section>
 
     <!-- ============ About / Story ============ -->
-    <section class="section story" id="about" aria-labelledby="story-title">
-      <div class="container story__grid">
-        <figure class="story__detail reveal">
-          <img src="assets/images/about-detail.webp" alt="An open law book beside a small ceramic sailing boat on a wooden desk" width="321" height="321" loading="lazy">
-        </figure>
-
-        <figure class="story__image reveal">
+    <section class="section" id="about" aria-labelledby="story-title">
+      <div class="container duo">
+        <figure class="duo__image reveal">
           <img src="assets/images/about-library.webp" alt="Bound volumes of law reports on wooden shelves in the firm’s library" width="1000" height="1000" loading="lazy">
         </figure>
-
-        <div class="story__text">
+        <div class="duo__text">
           <p class="eyebrow">Our story since 1996</p>
           <h2 class="h2 reveal" id="story-title">Founded by Christos Patsalides, <span class="accent">in the heart of Nicosia</span>, close to the courts and the business centre.</h2>
           <p class="body reveal">The firm was established in 1996 as Christos Patsalides &amp; Associates. Its reputation for effective representation through innovative and practical solutions has made it a trusted partner for clients facing complex regulation, disputes and new opportunities.</p>
           <a class="text-link reveal" href="about.html">Read more about the firm</a>
         </div>
+      </div>
+    </section>
+
+    <!-- ============ Corporate services (mirrored pair) ============ -->
+    <section class="section section--tight-top" aria-labelledby="corporate-title">
+      <div class="container duo duo--reverse">
+        <div class="duo__text">
+          <p class="eyebrow">Christos Patsalides Corporate Management Ltd</p>
+          <h2 class="h2 reveal" id="corporate-title">Accounting, corporate and financial advice, alongside your legal&nbsp;team</h2>
+          <p class="body reveal">Our associated consulting company offers accounting services and advice on investment banking, mergers and acquisitions, capital restructurings, project financing, public listings, regulatory and tax matters.</p>
+          <a class="btn btn--primary reveal" href="christos-patsalides-corporate-management-ltd/index.html">Explore corporate services <span class="btn__arrow" aria-hidden="true">→</span></a>
+        </div>
+        <figure class="duo__image reveal">
+          <img src="assets/images/corporate-boardroom.webp" alt="The firm’s boardroom, with a long glass table and black leather chairs" width="744" height="600" loading="lazy">
+        </figure>
       </div>
     </section>
 
@@ -285,21 +284,6 @@
       </div>
     </section>
 
-    <!-- ============ Corporate services (image + CTA) ============ -->
-    <section class="section section--tight-top" aria-labelledby="corporate-title">
-      <div class="container feature">
-        <div class="feature__text">
-          <p class="eyebrow">Christos Patsalides Corporate Management Ltd</p>
-          <h2 class="h2 reveal" id="corporate-title">Accounting, corporate and financial advice, alongside your legal&nbsp;team</h2>
-          <p class="body reveal">Our associated consulting company offers accounting services and advice on investment banking, mergers and acquisitions, capital restructurings, project financing, public listings, regulatory and tax matters.</p>
-          <a class="btn btn--primary reveal" href="christos-patsalides-corporate-management-ltd/index.html">Explore corporate services <span class="btn__arrow" aria-hidden="true">→</span></a>
-        </div>
-        <figure class="feature__image reveal">
-          <img src="assets/images/corporate-boardroom.webp" alt="The firm’s boardroom, with a long glass table and black leather chairs" width="744" height="600" loading="lazy">
-        </figure>
-      </div>
-    </section>
-
     <!-- ============ For private clients ============ -->
     <section class="section" id="private" aria-labelledby="private-title">
       <div class="container">
@@ -341,42 +325,57 @@
       </div>
     </section>
 
-    <!-- ============ People ============ -->
-    <section class="section section--tight-top" id="people" aria-labelledby="people-title">
+    <!-- ============ FAQ ============ -->
+    <section class="section section--tight-top" id="faq" aria-labelledby="faq-title">
       <div class="container">
-        <div class="split split--head">
-          <div class="split__lead">
-            <p class="eyebrow">Our people</p>
-            <h2 class="h2 people__title reveal" id="people-title">The partners leading the firm <span class="people__corner" aria-hidden="true"></span></h2>
-          </div>
-          <div class="split__side">
-            <p class="body reveal">Our team includes partners, associates and trainee lawyers, working alongside corporate consultants and accounting staff.</p>
-            <a class="text-link reveal" href="lawyers/index.html">Meet all our lawyers</a>
-          </div>
-        </div>
+        <p class="eyebrow">FAQ</p>
+        <h2 class="h2 faq__title reveal" id="faq-title">Common questions, <span class="accent">plain answers.</span></h2>
 
-        <ul class="people" role="list">
-          <li class="person reveal">
-            <img class="person__photo" src="assets/images/team/christos-patsalides.webp" alt="Portrait of Christos Patsalides" width="600" height="600" loading="lazy">
-            <h3 class="person__name">Christos Patsalides</h3>
-            <p class="person__role">Founder and Managing Partner</p>
-          </li>
-          <li class="person reveal">
-            <img class="person__photo" src="assets/images/team/panayiotis-a-kakkouras.webp" alt="Portrait of Panayiotis A. Kakkouras" width="600" height="600" loading="lazy">
-            <h3 class="person__name">Panayiotis A. Kakkouras</h3>
-            <p class="person__role">Senior Partner</p>
-          </li>
-          <li class="person reveal">
-            <img class="person__photo" src="assets/images/team/constantinos-kokkinoftas.webp" alt="Portrait of Constantinos Kokkinoftas" width="600" height="600" loading="lazy">
-            <h3 class="person__name">Constantinos Kokkinoftas</h3>
-            <p class="person__role">Senior Partner and Head of the Litigation Department</p>
-          </li>
-          <li class="person reveal">
-            <img class="person__photo" src="assets/images/team/avgoustinos-tsarkatzis.webp" alt="Portrait of Avgoustinos Tsarkatzis" width="600" height="600" loading="lazy">
-            <h3 class="person__name">Avgoustinos Tsarkatzis</h3>
-            <p class="person__role">Supervising Partner and Deputy Head of the Litigation Department</p>
-          </li>
-        </ul>
+        <div class="faq">
+          <details class="faq__item">
+            <summary class="faq__q">Where is your office?</summary>
+            <div class="faq__a">
+              <p>Our office is at 31 Evagoras Avenue, Evagoras Building, 4th Floor, 1066 Nicosia, close to the courts and the business centre. Post can be sent to P.O. Box 25617, 1311 Nicosia.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">Do you act for international clients?</summary>
+            <div class="faq__a">
+              <p>Yes. Our client base includes both domestic and international clients, as well as the public sector.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">Which areas of law do you practise?</summary>
+            <div class="faq__a">
+              <p>Litigation, insurance, real estate, mass media and entertainment, family law, funds, mergers and acquisitions, corporate and commercial law, employment and labour law, immigration law, inheritance, estate planning and wills, and trusts. Each area is summarised <a class="text-link" href="#business">above</a>.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">Can you also help with accounting and corporate administration?</summary>
+            <div class="faq__a">
+              <p>Yes, through Christos Patsalides Corporate Management Ltd, our associated consulting company, which provides accounting services and corporate and financial advice.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">Do you offer pro bono help?</summary>
+            <div class="faq__a">
+              <p>We are committed to providing pro bono services to people in our community who would otherwise have no access to legal help. Please contact us to discuss your situation.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">Does sending an enquiry make you my lawyer?</summary>
+            <div class="faq__a">
+              <!-- REVIEW: confirm wording with the firm before publication -->
+              <p>No. An enquiry through this website does not by itself create a lawyer–client relationship. Please avoid sharing confidential details until we have confirmed that we can act for you.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">How can I reach you?</summary>
+            <div class="faq__a">
+              <p>Call <a class="text-link" href="tel:+35722677677">+357 22 677 677</a>, email <a class="text-link" href="mailto:info@patsalides.com.cy">info@patsalides.com.cy</a>, or use the <a class="text-link" href="#contact">contact form</a>. Our fax number is +357 22 674 422.</p>
+            </div>
+          </details>
+        </div>
       </div>
     </section>
 
@@ -499,59 +498,6 @@
       </div>
     </section>
 
-    <!-- ============ FAQ ============ -->
-    <section class="section section--tight-top" id="faq" aria-labelledby="faq-title">
-      <div class="container">
-        <p class="eyebrow">FAQ</p>
-        <h2 class="h2 faq__title reveal" id="faq-title">Common questions, <span class="accent">plain answers.</span></h2>
-
-        <div class="faq">
-          <details class="faq__item">
-            <summary class="faq__q">Where is your office?</summary>
-            <div class="faq__a">
-              <p>Our office is at 31 Evagoras Avenue, Evagoras Building, 4th Floor, 1066 Nicosia, close to the courts and the business centre. Post can be sent to P.O. Box 25617, 1311 Nicosia.</p>
-            </div>
-          </details>
-          <details class="faq__item">
-            <summary class="faq__q">Do you act for international clients?</summary>
-            <div class="faq__a">
-              <p>Yes. Our client base includes both domestic and international clients, as well as the public sector.</p>
-            </div>
-          </details>
-          <details class="faq__item">
-            <summary class="faq__q">Which areas of law do you practise?</summary>
-            <div class="faq__a">
-              <p>Litigation, insurance, real estate, mass media and entertainment, family law, funds, mergers and acquisitions, corporate and commercial law, employment and labour law, immigration law, inheritance, estate planning and wills, and trusts. Each area is summarised <a class="text-link" href="#business">above</a>.</p>
-            </div>
-          </details>
-          <details class="faq__item">
-            <summary class="faq__q">Can you also help with accounting and corporate administration?</summary>
-            <div class="faq__a">
-              <p>Yes, through Christos Patsalides Corporate Management Ltd, our associated consulting company, which provides accounting services and corporate and financial advice.</p>
-            </div>
-          </details>
-          <details class="faq__item">
-            <summary class="faq__q">Do you offer pro bono help?</summary>
-            <div class="faq__a">
-              <p>We are committed to providing pro bono services to people in our community who would otherwise have no access to legal help. Please contact us to discuss your situation.</p>
-            </div>
-          </details>
-          <details class="faq__item">
-            <summary class="faq__q">Does sending an enquiry make you my lawyer?</summary>
-            <div class="faq__a">
-              <!-- REVIEW: confirm wording with the firm before publication -->
-              <p>No. An enquiry through this website does not by itself create a lawyer–client relationship. Please avoid sharing confidential details until we have confirmed that we can act for you.</p>
-            </div>
-          </details>
-          <details class="faq__item">
-            <summary class="faq__q">How can I reach you?</summary>
-            <div class="faq__a">
-              <p>Call <a class="text-link" href="tel:+35722677677">+357 22 677 677</a>, email <a class="text-link" href="mailto:info@patsalides.com.cy">info@patsalides.com.cy</a>, or use the <a class="text-link" href="#contact">contact form</a>. Our fax number is +357 22 674 422.</p>
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
   </main>
 
   <!-- ============ Footer ============ -->
